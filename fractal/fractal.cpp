@@ -72,13 +72,12 @@ int main(int argc, char *argv[])
       }
     }
     delta *= 0.98;
-    printf("\n delta: %f", delta);
   }
 
   // end time
   gettimeofday(&end, NULL);
   double runtime = end.tv_sec + end.tv_usec / 1000000.0 - start.tv_sec - start.tv_usec / 1000000.0;
-  printf("\ncompute time: %.4f s", runtime);
+  printf("compute time: %.4f s\n", runtime);
 
   // verify result by writing frames to BMP files
   if ((width <= 256) && (frames <= 100)) {
